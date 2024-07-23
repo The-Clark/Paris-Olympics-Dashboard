@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="company-name">Signify</span>
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mb-4">Back</a>
+        <h1>Status for Project: {{ project_ref }}</h1>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Stage</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Awaiting 1st Review</td>
+                    <td id="awaiting_1st_review">{{ status['awaiting_1st_review'] }}</td>
+                </tr>
+                <tr>
+                    <td>Awaiting 2nd Review</td>
+                    <td id="awaiting_2nd_review">{{ status['awaiting_2nd_review'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Signify Project Dashboard</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="company-name">Signify</span>
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{ url_for('static', filename='video/background.mp4') }}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="video-overlay">
+            <h1 class="display-4">SIGNIFY PROJECT DASHBOARD</h1>
+            <p class="lead">Live monitoring. Appropriate actions. Guaranteed safety.</p>
+        </div>
+    </div>
+                        
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8 text-center">
+                <h2>PARIS 2024</h2>
+                <form id="filter-form" class="form-inline justify-content-center mt-3">
+                    <input type="text" id="search-bar" class="form-control mb-2 mr-sm-2" placeholder="Search for a project...">
+                    <select id="client-select" class="form-control mb-2 mr-sm-2">
+                        <option value="paris_2024_olympics">Paris 2024 Olympics</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary mb-2">Filter</button>
+                </form>
+            </div>
+         </div>
+    </div>
+        
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>   
+</html>

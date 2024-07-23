@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Projects - Paris 2024 Olympics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="client-projects-background">
+    <header class="header">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="company-name">Signify</span>
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="content-container">
+        <h1 class="client-title">PARIS 2024 OLYMPICS</h1>
+        <table class="table table-bordered table-striped mt-3">
+            <thead class="thead-dark">
+                <tr>
+                    <th>PROJECT NAME</th>
+                    <th>AWAITING 1ST REVIEW</th>
+                    <th>AWAITING 2ND REVIEW</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in client_projects_status %}
+                <tr>
+                    <td><a href="{{ url_for('project_status', project_ref=project.name | lower | replace(' ', '_')) }}">{{ project.name | upper }}</a></td>
+                    <td>{{ project.awaiting_1st_review }}</td>
+                    <td>{{ project.awaiting_2nd_review }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

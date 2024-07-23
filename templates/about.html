@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Signify Project Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="company-name">Signify</span>
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2>About Us</h2>
+        <p>Welcome to the Signify Project Dashboard, your premier platform for monitoring and managing project statuses with precision and efficiency. Our dashboard is s$
+
+        <h3>Our Mission</h3>
+        <p>At Signify, our mission is to empower organizations with better data, enabling better decisions, better solutions, and better outcomes. We strive to deliver u$
+
+        <h3>What We Do</h3>
+        <p>The Signify Project Dashboard is a state-of-the-art tool that offers real-time monitoring and management of project statuses. Key features include:</p>
+        <ul>
+            <li><strong>Live Monitoring</strong>: Track the status of various projects under the Paris 2024 Olympics in real-time.</li>
+            <li><strong>Comprehensive Analytics</strong>: Gain insights into the number of reviews pending at different stages, helping you prioritize and manage resourc$
+            <li><strong>Automated Alerts</strong>: Receive notifications when critical thresholds are met, ensuring that no important updates are missed.</li>
+        </ul>
+
+        <h3>Our Approach</h3>
+        <p>We believe in a data-driven approach to project management. Our dashboard integrates seamlessly with your existing systems to collect, process, and present da$
+
+        <h3>Why Choose Us</h3>
+        <ul> 
+            <li><strong>Expertise</strong>: Our team comprises seasoned professionals with extensive experience in project management and data analytics.</li>
+            <li><strong>Customization</strong>: The dashboard is tailored to meet the specific needs of the Paris 2024 Olympics, ensuring relevance and effectiveness.</l$
+            <li><strong>User-Friendly Interface</strong>: Our platform is designed with the user in mind, offering an intuitive and easy-to-navigate interface.</li>
+            <li><strong>Reliability</strong>: We are committed to providing a reliable and secure platform, ensuring your data is protected and always accessible.</li>
+        </ul>
+        
+        <h3>Our Vision</h3>
+        <p>We envision a world where data empowers organizations to achieve their goals with greater efficiency and effectiveness. Through our innovative solutions, we a$
+        
+        <h3>Contact Us</h3>
+        <p>We are here to assist you. If you have any questions or need support, please do not hesitate to contact us. Visit our <a href="{{ url_for('contact') }}">Conta$
+            
+        <p>Thank you for choosing the Signify Project Dashboard. Together, we can achieve better data, better decisions, better solutions, and better outcomes.</p>
+    </main>  
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
